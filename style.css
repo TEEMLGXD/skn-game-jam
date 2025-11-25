@@ -314,12 +314,10 @@ section {
     color: #38bdf8;
 }
 
-@media (max-width: 768px)
-{
-  nav ul {
+
+nav ul {
   display: flex;
   flex-wrap: wrap;      /* ให้แถวแตกลงได้ */
   gap: 12px;
   justify-content: center;
-}
 }
