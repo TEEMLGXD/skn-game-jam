@@ -17,19 +17,10 @@ body {
 }
 
 .hero {
-  background-image: url("images/banner.png");
-  background-size: cover;
-  background-position: center;
-  height: 55vh; /* ลดความสูงลง */
-  min-height: 350px; /* กันภาพเตี้ยเกินบนมือถือ */
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: 40vh;
-    min-height: 250px;
-    background-position: center top;
-  }
+  background: linear-gradient(135deg, #1fb3f8, #1e293b);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
 }
 
 .btn {
@@ -63,9 +54,9 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px; /* จาก 900 → 1200 */
   margin: 0 auto;
-  padding: 0 20px; /* เพิ่มพื้นที่สองข้าง */
+  padding: 40px 24px; /* เพิ่มพื้นที่รอบข้อความ */
 }
 
 h2 {
@@ -321,24 +312,4 @@ section {
 
 .nav-menu a:hover {
     color: #38bdf8;
-}
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;      /* ให้แถวแตกลงได้ */
-  gap: 12px;
-  justify-content: center;
-}
-
-.mentor-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.mentor-images img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 12px;
 }
