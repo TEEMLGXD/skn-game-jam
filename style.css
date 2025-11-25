@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #050816;
+  color: #f5f5f5;
+}
+
+.banner {
+    display: block;
+    margin: 0 auto;       /* จัดรูปให้อยู่กลาง */
+    max-width: 100%;      /* ให้รูปย่อลงตามหน้าจอ */
+    height: auto;         /* รักษาสัดส่วนรูป */
+}
+
+.hero {
+  background: linear-gradient(135deg, #1fb3f8, #1e293b);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: #738ADB;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btnl {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: #06C755;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btnd {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  background: #0029bd;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1200px; /* จาก 900 → 1200 */
+  margin: 0 auto;
+  padding: 40px 24px; /* เพิ่มพื้นที่รอบข้อความ */
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 28px;
+}
+
+section {
+  margin-bottom: 32px;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.navbar2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  /* background: rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #14b8a6, #3b82f6);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  opacity: 0.9;
+}
+
+/* เมื่อเปิดในมือถือ ปุ่มจะลงมาเรียงกัน */
+@media (max-width: 600px) {
+  .navbar2 {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    }
+}
+
+.profile{
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    background: #ff5a5c;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mentor-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px 24px 40px;
+    background: #0f172a;
+    border-radius: 16px;
+    color: white;
+}
+
+.mentor-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ========== ส่วนล่าง ซ้าย-ขวา ========== */
+.mentor-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* ข้อความฝั่งซ้าย */
+.mentor-text {
+    flex: 2;
+    text-align: left;
+}
+
+/* รูปฝั่งขวา */
+.mentor-img img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* ========== รองรับมือถือ ========== */
+@media(max-width: 700px) {
+    .mentor-body {
+        flex-direction: column;
+        text-align: center;
+    }
+    .mentor-text {
+        text-align: center;
+    }
+}
+
+.mentor-img-group {
+    display: flex;
+    flex-direction: column;   /* เรียงบน-ล่าง */
+    gap: 12px;                /* ระยะห่างระหว่างรูป */
+    align-items: center;      /* จัดให้อยู่กลางในแกนขวาง */
+}
+
+/* รูปโปรไฟล์ (สี่เหลี่ยม) */
+.mentor-img-group .avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* รูปโปสเตอร์ (สูงได้ ยาวได้) */
+.mentor-img-group .poster {
+    width: 150px;      /* กำหนดแค่ความกว้าง */
+    height: auto;      /* สูงตามสัดส่วน ไม่โดนบีบ */
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* style ของรูป */
+.mentor-img-group img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.full-width {
+  grid-column: span 2;  
+  margin-top: 20px;
+}
+
+.highlightgold {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.highlightcopper {
+    color: #B87333;
+    font-weight: bold;
+}
+
+/* กล่องรวมทุก engine */
+.engine-list {
+  max-width: 900px;      /* กว้างเท่ากับ .container ของนายได้เลย */
+  margin: 80px auto;     /* เว้นด้านบน/ล่าง และอยู่กลางหน้าจอ */
+  display: flex;
+  flex-direction: column;
+  gap: 72px;             /* ระยะห่างระหว่างแต่ละแถว */
+}
+
+/* แต่ละแถว (title+text + logo) */
+.engine-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* แถวที่ต้องการสลับด้าน (เช่น GDevelop) */
+.engine-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ข้อความด้านซ้าย/ขวา */
+.engine-text h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.engine-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* โลโก้ */
+.engine-logo img {
+  width: 90px;          /* ปรับตามขนาดไฟล์จริง */
+  height: auto;
+}
+
+/* ทำให้สวยบนจอมือถือ */
+@media (max-width: 768px) {
+  .engine-row,
+  .engine-row.reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .engine-logo img {
+    width: 70px;
+  }
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #38bdf8;
+}
