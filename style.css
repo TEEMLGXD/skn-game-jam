@@ -189,7 +189,7 @@ section {
 
 /* รูปโปสเตอร์ (สูงได้ ยาวได้) */
 .mentor-img-group .poster {
-    width: 150px;      /* กำหนดแค่ความกว้าง */
+    width: 250px;      /* กำหนดแค่ความกว้าง */
     height: auto;      /* สูงตามสัดส่วน ไม่โดนบีบ */
     border-radius: 0px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
